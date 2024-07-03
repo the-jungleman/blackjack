@@ -23,7 +23,7 @@ class CardGame:
         self.reveal_dealer =     False
         self.hand_active = False
         self.add_score = False
-        self.results = ['','Player WINS!', 'DEALER WINS', 'TIE GAME!']
+        self.results = ['','PLAYER WINS!', 'DEALER WINS', 'TIE GAME!']
         self.cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
         self.one_deck = 4 * self.cards
         self.decks = 4
@@ -41,6 +41,7 @@ class CardGame:
         self.screen.blit(self.font.render(f'Score[{player}]', True, 'white'), (350, 400))
         if self.reveal_dealer:
             self.screen.blit(self.font.render(f'Score[{dealer}]', True, 'white'), (350, 100))
+            
     # Cartas design
     def draw_cards(self, player, dealer, reveal):
         for i in range(len(player)):
